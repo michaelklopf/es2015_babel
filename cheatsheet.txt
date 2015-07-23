@@ -258,3 +258,10 @@ git push -u origin master
 
 # uninstall npm package + reference in package.json
 npm uninstall package --save-dev
+
+# gulp
+# to run it manually type command
+gulp
+
+# with automatic build setup type command
+gulp watch

@@ -1,12 +1,13 @@
 var gulp = require('gulp')
-var babel = require("gulp-babel")
+//var babel = require("gulp-babel")
 var concat = require('gulp-concat')
 var using = require('gulp-using')
+var browserify = require('gulp-browserify')
 
 gulp.task('browserify', function() {
     gulp.src('jsbabel/main.js')
       .pipe(using())
-      .pipe(babel())
+      .pipe(browserify({transform: 'babelify'}))
       .pipe(concat('main.js'))
       .pipe(gulp.dest('./dist/js'))
 })
@@ -20,5 +21,5 @@ gulp.task('copy', function() {
 gulp.task('default', ['browserify', 'copy'])
 
 gulp.task('watch', function() {
-    gulp.watch('static/**/*.*', ['default'])
+    gulp.watch('jsbabel/**/*.*', ['default'])
 })
