@@ -1,0 +1,26 @@
+{
+  "name": "babelproject",
+  "version": "1.0.0",
+  "description": "Developing app with react and babel",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "babel"
+  ],
+  "author": "Michael",
+  "license": "ISC",
+  "devDependencies": {
+    "babelify": "latest",
+    "gulp": "latest",
+    "gulp-browserify": "latest",
+    "gulp-concat": "latest",
+    "gulp-using": "latest",
+    "jade": "latest",
+    "node-env-file": "^0.1.7"
+  },
+  "dependencies": {
+    "express": "latest"
+  }
+}
