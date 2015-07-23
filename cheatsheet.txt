@@ -251,3 +251,10 @@ bower install <library> --save
 git remote add origin https://github.com/yourname/reponame.git
 # push to github
 git push -u origin master
+
+# good to know: http://webapplog.com/seven-things-you-should-stop-doing-with-node-js/
+# https://github.com/node-inspector/node-inspector
+# semicolons are not needed (Swift showed me that it's a good idea), Never start a line with ( or [ though
+
+# uninstall npm package + reference in package.json
+npm uninstall package --save-dev
