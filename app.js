@@ -24,7 +24,7 @@ app.use(session({secret: process.env.SESSIONKEY, cookie: {maxAge: 60000 }}))
 app.use(methodOverride())
 */
 
-//app.use("/css" , express.static(__dirname + '/static/css'))
+app.use("/css" , express.static(__dirname + '/dist/css'))
 app.use("/js" , express.static(__dirname + '/dist/js'))
 app.use("/img", express.static(__dirname + '/static/img'))
 

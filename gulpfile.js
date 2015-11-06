@@ -16,10 +16,14 @@ gulp.task('copy', function() {
     gulp.src('views/index.html')
       .pipe(using())
       .pipe(gulp.dest('./dist'))
+    gulp.src('css/*.*')
+      .pipe(using())
+      .pipe(gulp.dest('./dist/css'))
 })
 
 gulp.task('default', ['browserify', 'copy'])
 
 gulp.task('watch', function() {
     gulp.watch('jsbabel/**/*.*', ['default'])
+    gulp.watch('css/*.*', ['copy'])
 })
