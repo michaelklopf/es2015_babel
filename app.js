@@ -39,6 +39,16 @@ app.get('/', function(req, res) {
   res.sendFile(__dirname + '/dist/index.html')
 })
 
+app.get('/es6', function(req, res) {
+  res.contentType('text/html')
+  res.sendFile(__dirname + '/dist/es6.html')
+})
+
+app.get('/flex', function(req, res) {
+  res.contentType('text/html')
+  res.sendFile(__dirname + '/dist/flex.html')
+})
+
 // For seeing changes without stoping, starting the server, install nodemon globally npm install -g nodemon. Start your server with nodemon server.js
 http.createServer(app).listen(app.get('port'), function() {
     console.log('Listening on port ' + app.get('port'))
