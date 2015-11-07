@@ -3,8 +3,9 @@ var gulp = require('gulp')
 var concat = require('gulp-concat')
 var using = require('gulp-using')
 var babel = require('gulp-babel')
+var nodemon = require('gulp-nodemon')
 
-gulp.task('browserify', function() {
+gulp.task('babel', function() {
     gulp.src('jsbabel/main.js')
       .pipe(using())
       .pipe(babel({
@@ -30,9 +31,15 @@ gulp.task('copy', function() {
       .pipe(gulp.dest('./dist/css'))
 })
 
-gulp.task('default', ['browserify', 'copy'])
-
-gulp.task('watch', function() {
-    gulp.watch('jsbabel/**/*.*', ['default'])
-    gulp.watch('css/*.*', ['copy'])
+gulp.task('develop', function () {
+  nodemon({ script: 'app.js',
+          ext: 'html js',
+          tasks: ['babel'],
+          ignore: ['dist/*']
+  })
+  .on('restart', function () {
+    console.log('restarted!')
+  })
 })
+
+gulp.task('default', ['copy', 'develop'])

@@ -4,10 +4,11 @@ function aCondition(condition) {
   if (condition) {
     var blue = "blue"
     let red = "red"
+    let blue = "BLAU"
     return blue
   } else {
     blue = "blau" // this line shouldn't be allowed with es6, but is
-    red = "rot" // this line is throwing an error as predicted
+    //red = "rot" // this line is throwing an error as predicted
     return blue
   }
 }
