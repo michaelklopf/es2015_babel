@@ -62,3 +62,27 @@ for (let i = 0; i < 3; i++) {
 funcs.forEach(function(func) {
   func()
 })
+
+for (let key in funcs) {
+  console.log("The key is " + key)
+}
+
+// recommentation: use const for let
+
+// String manipulation:
+function is32Bit(c) {
+    return c.codePointAt(0) > 0xFFFF;
+}
+
+let exampleString = "😬b"
+console.log("length of string is " + exampleString.length)
+console.log("is 32 bit string? " + is32Bit(exampleString)) // returns false for "12b"
+let exStrPt1 = exampleString.codePointAt(0)
+console.log(exStrPt1)
+console.log(String.fromCodePoint(exStrPt1))
+let exStrPt2 = exampleString.codePointAt(1)
+console.log(exStrPt2)
+console.log(String.fromCodePoint(exStrPt2))
+let exStrPt3 = exampleString.codePointAt(2)
+console.log(exStrPt3)
+console.log(String.fromCodePoint(exStrPt3))
