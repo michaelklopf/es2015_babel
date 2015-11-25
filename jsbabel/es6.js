@@ -86,3 +86,14 @@ console.log(String.fromCodePoint(exStrPt2))
 let exStrPt3 = exampleString.codePointAt(2)
 console.log(exStrPt3)
 console.log(String.fromCodePoint(exStrPt3))
+
+var searchSubStringTest = "     The World Beyond     "
+searchSubStringTest = searchSubStringTest.trim()
+console.log(searchSubStringTest)
+console.log(searchSubStringTest.startsWith("The"))
+console.log(searchSubStringTest.endsWith("d"))
+console.log(searchSubStringTest.includes("World"))
+
+console.log(" star wars ".repeat(4))
+
+console.log("end of test")
